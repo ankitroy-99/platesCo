@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
+
+import './Basket.style.css'
  
-const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
+export const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
   const [products, setProducts] = useState([]);
   const [dCharge,setDeliveryCharge] = useState(0)
   const [totalCost,setTotalCost] = useState(0)
@@ -44,7 +46,7 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
     });
 
     // Apply delivery charge rules
-  const   deliveryCharge = deliveryChargeRules.find(
+  const deliveryCharge = deliveryChargeRules.find(
       (rule) => total >= rule.threshold
     ).cost;
 
@@ -86,7 +88,6 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
   );
 };
 
-export default Basket;
 
 
 
