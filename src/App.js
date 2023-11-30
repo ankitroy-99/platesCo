@@ -1,5 +1,5 @@
 import "./App.css";
-import { Plates } from "./Plates";
+import { Plates } from "./screens";
 
 const App = () => {
   return (

@@ -5,7 +5,7 @@ import {
   productCatalogue,
   deliveryChargeRules,
   specialOffers,
-} from "../constant/constants";
+} from "../../constant/constants";
 
 export const Plates = () => {
   return (

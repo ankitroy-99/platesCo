@@ -7,7 +7,7 @@ export const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers })
   const [dCharge,setDeliveryCharge] = useState(0)
   const [totalCost,setTotalCost] = useState(0)
   
-  useEffect(()=>{
+  useEffect(() => {
     calculateTotal()
   },[products])
 
@@ -28,7 +28,6 @@ export const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers })
       return acc;
     }, 0);
 
-    // Apply special offers
     const productsCount = {};
     products.forEach((productCode) => {
       productsCount[productCode] = (productsCount[productCode] || 0) + 1;
@@ -45,7 +44,6 @@ export const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers })
       }
     });
 
-    // Apply delivery charge rules
   const deliveryCharge = deliveryChargeRules.find(
       (rule) => total >= rule.threshold
     ).cost;
