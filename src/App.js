@@ -1,12 +1,12 @@
-import './App.css';
-import Plates from './Plates/plates';
+import "./App.css";
+import { Plates } from "./Plates";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Plates/>
+      <Plates />
     </div>
   );
-}
+};
 
 export default App;

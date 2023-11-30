@@ -1,0 +1,55 @@
+.main-div {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin: 2%;
+}
+.product-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.basket-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.productBlock {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.productHeader {
+  margin-top: 8vh;
+}
+.product-list {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 15rem;
+  border: 1px solid #b9b2b2;
+}
+.basketContainer {
+  border: 1px solid #b9b2b2;
+  padding-inline: 12%;
+  margin-top: 2rem;
+}
+.buttonStyle {
+  display: flex;
+  gap: 2rem;
+}
+.basketItem {
+  margin-top: 2rem;
+}
