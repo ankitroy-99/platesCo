@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Plates from './plates';
+import Plates from './Plates/plates';
 
 function App() {
   return (

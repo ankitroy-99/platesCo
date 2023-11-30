@@ -4,11 +4,11 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
   const [products, setProducts] = useState([]);
   const [dCharge,setDeliveryCharge] = useState(0)
   const [totalCost,setTotalCost] = useState(0)
- 
   
   useEffect(()=>{
     calculateTotal()
   },[products])
+
   const addProduct = (productCode) => {
     setProducts([...products, productCode]);
   };
@@ -35,7 +35,8 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
     Object.keys(productsCount).forEach((code) => {
       const count = productsCount[code];
       const offer = specialOffers[code];
-      if (offer && offer.offer === 'buy-one-get-one-half-price') {
+      const halfPriceOffer = 'buy-one-get-one-half-price'
+      if (offer && offer.offer === halfPriceOffer) {
         const eligibleCount = Math.floor(count / 2);
         const discount = (productCatalogue[code].price / 2) * eligibleCount;
         total -= discount;
@@ -76,8 +77,10 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
     </div> 
   <div className="basket-section">
     <h2 className="basketItem">Basket Total</h2>
+    <div className="basketContainer">
     <p className="basketItem">Delivery Charge : ${products.length>0? dCharge:0}</p>
     <p>Total: ${totalCost}</p>
+    </div>
     </div>
   </div>
   );
