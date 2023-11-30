@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Basket from './basket';
 const plates =()=>{
     const productCatalogue = {
@@ -6,7 +6,7 @@ const plates =()=>{
         G01: { price: 24.95 ,name:'Green Plate'},
         B01: { price: 7.95 ,name:'Blue Plate'},
       };
-      
+   
       const deliveryChargeRules = [
         { threshold: 90, cost: 0 },
         { threshold: 50, cost: 2.95 },

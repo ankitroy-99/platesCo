@@ -38,11 +38,28 @@ code {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
-
+.productBlock {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.productHeader{
+  margin-top: 8vh;
+}
 .product-list {
-  display: 'flex' ;
-   gap: "15rem";
-   border:"1px solid #b9b2b2";
-   padding:'8px';
-   align-items:'centre';
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 15rem;
+  border: 1px solid #b9b2b2;
+}
+.buttonStyle {
+  display: flex;
+  gap: 2rem;
+}
+.basketItem {
+  margin-top: 2rem;
 }

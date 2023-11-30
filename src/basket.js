@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-
+ 
 const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
   const [products, setProducts] = useState([]);
   const [dCharge,setDeliveryCharge] = useState(0)
@@ -23,7 +23,6 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
     let total = products.reduce((acc, productCode) => {
       const product = productCatalogue[productCode];
       acc += product.price;
-      //console.log('acc',acc)
       return acc;
     }, 0);
 
@@ -59,27 +58,25 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
 
   return (
     <div className="main-div">
-        <div className="product-section">
-    <h2 style={{ marginTop: '8vh' }}>Products</h2>
-
-    <ul style={{ display: 'flex',
-    gap: '4rem',
-    flexDirection: 'column', alignItems: 'center',marginTop:'2rem',marginBottom:'4rem'}}>
-      {Object.keys(productCatalogue).map((productCode) => (
-        <li key={productCode} style={{ display: 'flex' , gap: "15rem",border:"1px solid #b9b2b2",padding:'8px',alignItems:'centre'}}>
-          <span>{productCatalogue[productCode].name} - ${productCatalogue[productCode].price}</span>
-          <div style={{ display: 'flex',gap: '2rem'}}>
-            <button type="button" className="btn btn-primary" onClick={() => addProduct(productCode)}>Add</button>
-            <button type="button" className="btn btn-danger" onClick={() => removeProduct(productCode)}>Remove</button>
-          </div>
-        </li>
-      ))}
+    <div className="product-section">
+    <h2 className="productHeader">Products</h2>
+        <ul className="productBlock">
+        {Object.keys(productCatalogue).map((productCode) => (
+            
+            <li key={productCode} className="product-list">
+            <span>{productCatalogue[productCode].name} - ${productCatalogue[productCode].price}</span>
+            <div className="buttonStyle">
+                <button type="button" className="btn btn-primary" onClick={() => addProduct(productCode)}>Add</button>
+                <button type="button" className="btn btn-danger" onClick={() => removeProduct(productCode)}>Remove</button>
+            </div>         
+            </li>
+            
+        ))}
     </ul>
     </div> 
   <div className="basket-section">
-    <h2 style={{marginTop:'2rem'}}>Basket Total</h2>
-    <p style={{marginTop:'2rem'}}>Delivery Charge : ${products.length>0? dCharge:0}</p>
-    
+    <h2 className="basketItem">Basket Total</h2>
+    <p className="basketItem">Delivery Charge : ${products.length>0? dCharge:0}</p>
     <p>Total: ${totalCost}</p>
     </div>
   </div>
