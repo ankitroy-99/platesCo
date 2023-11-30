@@ -59,20 +59,20 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
 
   return (
     <div className="main-div">
-        <div className="product-section">
+    <div className="product-section">
     <h2 style={{ marginTop: '8vh' }}>Products</h2>
-    <ul style={{ display: 'flex',
-    gap: '4rem',
-    flexDirection: 'column', alignItems: 'center',marginTop:'2rem',marginBottom:'4rem'}}>
-      {Object.keys(productCatalogue).map((productCode) => (
-        <li key={productCode} style={{ display: 'flex' , gap: "15rem",border:"1px solid #b9b2b2",padding:'8px',alignItems:'centre'}}>
-          <span>{productCatalogue[productCode].name} - ${productCatalogue[productCode].price}</span>
-          <div style={{ display: 'flex',gap: '2rem'}}>
-            <button type="button" className="btn btn-primary" onClick={() => addProduct(productCode)}>Add</button>
-            <button type="button" className="btn btn-danger" onClick={() => removeProduct(productCode)}>Remove</button>
-          </div>
-        </li>
-      ))}
+        <ul style={{ display: 'flex',
+        gap: '4rem',
+        flexDirection: 'column', alignItems: 'center',marginTop:'2rem',marginBottom:'4rem'}}>
+        {Object.keys(productCatalogue).map((productCode) => (
+            <li key={productCode} style={{ display: 'flex' , gap: "15rem",border:"1px solid #b9b2b2",padding:'8px',alignItems:'centre'}}>
+            <span>{productCatalogue[productCode].name} - ${productCatalogue[productCode].price}</span>
+            <div style={{ display: 'flex',gap: '2rem'}}>
+                <button type="button" className="btn btn-primary" onClick={() => addProduct(productCode)}>Add</button>
+                <button type="button" className="btn btn-danger" onClick={() => removeProduct(productCode)}>Remove</button>
+            </div>
+            </li>
+        ))}
     </ul>
     </div> 
   <div className="basket-section">
