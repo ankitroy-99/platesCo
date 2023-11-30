@@ -79,7 +79,6 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
   <div className="basket-section">
     <h2 style={{marginTop:'2rem'}}>Basket Total</h2>
     <p style={{marginTop:'2rem'}}>Delivery Charge : ${products.length>0? dCharge:0}</p>
-    
     <p>Total: ${totalCost}</p>
     </div>
   </div>
