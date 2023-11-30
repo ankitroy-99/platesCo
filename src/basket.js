@@ -61,7 +61,6 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
     <div className="main-div">
         <div className="product-section">
     <h2 style={{ marginTop: '8vh' }}>Products</h2>
-
     <ul style={{ display: 'flex',
     gap: '4rem',
     flexDirection: 'column', alignItems: 'center',marginTop:'2rem',marginBottom:'4rem'}}>
