@@ -1,10 +1,10 @@
 import "./App.css";
-import { Plates } from "./Screens";
+import { Plates } from "./screens";
 
 const App = () => {
   return (
     <div className="App">
-<Plates/>
+      <Plates />
     </div>
   );
 };

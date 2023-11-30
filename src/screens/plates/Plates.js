@@ -1,10 +1,13 @@
 import React from "react";
 
-import { Basket } from "../Basket";
-import { productCatalogue, deliveryChargeRules, specialOffers } from "../../co/constants";
+import { Basket } from "../basket";
+import {
+  productCatalogue,
+  deliveryChargeRules,
+  specialOffers,
+} from "../../constant/constants";
 
 export const Plates = () => {
-
   return (
     <div>
       <h1 style={{ color: "white" }}>Plates Co</h1>
@@ -16,5 +19,3 @@ export const Plates = () => {
     </div>
   );
 };
-
-

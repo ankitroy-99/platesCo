@@ -1,2 +1,2 @@
-export * from './Basket'
-export * from './Plates'
+export * from "./basket";
+export * from "./plates";
