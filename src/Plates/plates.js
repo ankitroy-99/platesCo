@@ -1,5 +1,5 @@
 import React from 'react'
-import Basket from './basket';
+import Basket from '../Basket/basket';
 const plates =()=>{
     const productCatalogue = {
         R01: { price: 32.95 ,name:'Red Plate'},

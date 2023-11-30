@@ -56,6 +56,11 @@ code {
   gap: 15rem;
   border: 1px solid #b9b2b2;
 }
+.basketContainer {
+  border: 1px solid #b9b2b2;
+  padding-inline: 12%;
+  margin-top: 2rem;
+}
 .buttonStyle {
   display: flex;
   gap: 2rem;
