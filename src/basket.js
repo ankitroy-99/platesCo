@@ -54,8 +54,6 @@ const Basket = ({ productCatalogue, deliveryChargeRules, specialOffers }) => {
         
     }
     setTotalCost(total.toFixed(2))
-    //return total.toFixed(2);
-   // return totalCost
   };
   
 
